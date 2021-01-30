@@ -1,0 +1,83 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Liquidaciones
+
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+         
+                     </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left" >
+                Detalle Liquidaciones Tienda ID <span>{{comercio.id}} </span>
+         </strong>
+        </div>
+        <div class="col-md-4 four">
+           
+                <mat-list>
+                  <mat-list-item> <mat-icon aria-hidden="false" aria-label="" routerLink="/liquidaciones/tiendas" class="ico">arrow_back</mat-icon> <span class="ico">Volver</span></mat-list-item>
+                    </mat-list>
+        </div>
+
+    </div>
+    <div class="top"> </div>
+<br />
+<mat-card class="main">
+    <table class="table top">
+        <thead>
+          <tr>
+            <th>Fecha de Liquidación</th>
+            <th>Nombre Tienda</th>
+            <th>Plan de la Tienda,</th>
+            <th>Total Comisiones,</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{detail.periodo}}</td>
+            <td>{{comercio.nombre}}</td>
+            <td>{{comercio.tipo_liquidacion}}</td>
+            <td>{{detail.importe_total}}</td>
+            <td class="badge badge-secondary gyellow" [ngClass]="{red: detail.estado === 'PENDIENTE'}">{{detail.estado}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+</mat-card>    
+<div></div>
+<div></div>
+<br />
+<br />
+<p class="detail">Detalle Comisiones por Pedido</p>
+<table class="table top">
+    <thead>
+      <tr>
+        <th>Fecha/hora pedido</th>
+        <th>Consumidor</th>
+        <th>Importe Pedido</th>
+        <th>Importe comisión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of personas">
+        <td>{{ person.fecha_creacion }}</td>
+        <td>{{ person.nombre }}<span class="lf">{{ person.apellidos }}</span></td>
+        <td>{{ detail.importe_fijo }}</td>
+        <td>{{ detail.importe_comisiones }}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+ 
+</div>
+

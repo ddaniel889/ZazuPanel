@@ -1,0 +1,34 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 30px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2"> Editar Tipo de Vehículo</h3>
+      </div>
+      <br />
+      <mat-dialog-content  [formGroup]="form">
+      <div class="container-fluid">  
+        <div class="row" >  
+            <div class="col-md-12">        
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput  formControlName="nombre">
+        </mat-form-field>
+        <br />
+        <br />
+        <div class="image">
+        <mat-label>Imagen de Vehículo</mat-label> <br />
+        <input #inputFoto hidden="true" type="file" onclick="this.value=null" (change)="onFileChoosen($event.target.files[0])"/>
+        <button mat-flat-button color="primary" type="button" (click)="inputFoto.click()" class="image2"> <span class="title2">Imagen</span></button>
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+    </div> 
+      </div>
+    
+    </mat-dialog-content>
+    
+    <mat-dialog-actions>
+        <button type="button" class="btn btn-light" (click)="closeWithoutSave()" class="btn btn-dark btn">Cancelar</button>
+        <button   type="button" (click)="save()" class="btn btn-success save">Guardar</button>    
+    </mat-dialog-actions>
+    </div>

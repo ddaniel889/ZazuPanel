@@ -1,0 +1,93 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 40px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2"> Editar bonificación de Repartidores</h3>
+      </div>
+      <br />
+      <br />
+      <mat-dialog-content [formGroup]="form">
+        <table class="full-width-table" cellspacing="0">
+            <tr>
+            <td><mat-form-field class="">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="nombre">
+            </mat-form-field></td>
+            
+            <td>
+                <mat-list>
+                    <mat-list-item>  <span class="example-margin">Inactivo <mat-icon aria-hidden="false" aria-label="toggle-on" class="edit example-margin">toggle_on</mat-icon> <span class="edit">Activo</span></span></mat-list-item>
+                </mat-list>   
+            </td>  
+            </tr>
+        <tr>
+            <td colspan="2">
+                <mat-form-field class="full-width">
+                    <mat-label>Descripción,</mat-label>
+                    <textarea matInput  formControlName="descripcion"></textarea>
+                  </mat-form-field>
+            </td>    
+       </tr>
+       <label>   <strong>Validez:  </strong> </label>
+       <tr>
+      
+            <td>
+               
+                <mat-form-field class="full-width">
+                    <mat-label><strong> Fecha Inicio</strong> </mat-label>
+                    <input matInput type="date" formControlName="finicio">
+                  </mat-form-field>
+           
+
+            </td>  
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-label>Hora de inicio </mat-label>
+                    <input matInput type="time"  formControlName="inicio">
+                </mat-form-field>
+
+            </td>   
+
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-label><strong> Fecha finalización</strong> </mat-label>
+                    <input matInput type="date"  formControlName="ffin">
+                  </mat-form-field>
+           
+
+            </td>  
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-label>Hora de finalización </mat-label>
+                    <input matInput type="time"  formControlName="fin">
+                </mat-form-field>
+           
+
+            </td>   
+
+        </tr>
+    <br />
+        <tr>
+            <td>
+                <mat-label> Tipo de Descuento,</mat-label>
+        <select class="form-control sel1"   formControlName="descuento">
+                <option  value="PORCENTUAL" >PORCENTUAL</option>
+                <option  value="NOMINAL">NOMINAL</option>
+             </select>
+            </td>  
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-label>Valor de Descuento, </mat-label>
+                    <input matInput type="number"  min=0 formControlName="valor">
+                </mat-form-field>
+            </td>   
+        </tr>
+       </table>  
+    <br />    
+    </mat-dialog-content>
+    
+    <mat-dialog-actions>
+        <button type="button" class="btn btn-light" (click)="closeWithoutSave()" class="btn btn-dark btn">Cancelar</button>
+        <button [mat-dialog-close]="dataInsert"  type="button" class="btn btn-success save" (click)="save()">Guardar</button>    
+    </mat-dialog-actions>
+    </div>

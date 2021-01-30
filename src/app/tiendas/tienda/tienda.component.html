@@ -1,0 +1,96 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Tiendas
+
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+         
+                     </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+    
+        </div>
+        <div class="col-md-4 four">
+            <form class="form-inline">
+              <span class="glyphicon glyphicon-search"></span>
+                <div class="input-group">
+                  <span class="">@</span>
+                  <input type="text" class="form-control buscar" placeholder="Buscar"  (keyup)="applyFilter($event.target.value)">
+                </div>    
+              </form>
+
+
+
+    
+        </div>
+
+    </div>
+    <div class="top"> </div>
+
+<div></div>
+<div></div>
+<span class="float2">
+  <!--button mat-mini-fab class="float add3" >
+    <mat-icon aria-hidden="false" aria-label="add" class="add2" >filter_list</mat-icon>
+  </button-->  
+<button mat-mini-fab class="float" >
+  <mat-icon aria-hidden="false" aria-label="add" class="add" (click)="openDialog()">add</mat-icon>
+</button>
+</span>
+
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+
+    <ng-container matColumnDef="Nombre Tienda">
+      <th mat-header-cell *matHeaderCellDef> Nombre Tienda </th>
+      <td mat-cell *matCellDef="let tienda"> {{tienda.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Categoría">
+      <th mat-header-cell *matHeaderCellDef> Categoría </th>
+      <td mat-cell *matCellDef="let tienda"> {{tienda.tipo_repartidor}} </td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="Localidad">
+      <th mat-header-cell *matHeaderCellDef> Localidad </th>
+      <td mat-cell *matCellDef="let tienda"> {{tienda.tarifa_id}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Logística">
+      <th mat-header-cell *matHeaderCellDef> Logística </th>
+      <td mat-cell *matCellDef="let tienda"> {{tienda.operar_en}} </td>
+    </ng-container>
+
+     <ng-container matColumnDef="Plan">
+      <th mat-header-cell *matHeaderCellDef> Plan </th>
+      <td mat-cell *matCellDef="let tienda"> {{tienda.tarifa_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let tienda">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/edit/{{tienda.id}}"  class="edit align">edit</mat-icon>
+        <app-toggle (changed)="onChange($event)" class="align">
+        </app-toggle></td>
+  </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="20" [pageSizeOptions]="[1, 15, 30, 100]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+</div>

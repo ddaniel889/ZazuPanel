@@ -1,0 +1,43 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 30px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2"> Datos de Repartidor</h3>
+      </div>
+      <br />
+      <mat-dialog-content [formGroup]="form">  
+        <input  matInput formControlName="nombre" [hidden]="true"> 
+        <input  matInput formControlName="apellidos" [hidden]="true"> 
+        <input  matInput formControlName="correo" [hidden]="true"> 
+        <input  matInput formControlName="genero" [hidden]="true"> 
+        <input  matInput formControlName="dominio" [hidden]="true">  
+        <input  matInput formControlName="comercio_id" [hidden]="true">  
+        <input  matInput formControlName="cuit" [hidden]="true">  
+        <input  matInput formControlName="fecha_nacimiento" [hidden]="true">  
+        <input  matInput formControlName="pais_id" [hidden]="true">  
+         <mat-form-field>
+            <mat-label>Domiclio</mat-label>
+            <input matInput formControlName="domicilio">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Localidad</mat-label>
+            <input matInput formControlName="localidad">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <input matInput formControlName="telefono">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>nit</mat-label>
+            <input matInput formControlName="nit">
+        </mat-form-field> <br />
+            <mat-label class="bd"> Tipo de Vehículo</mat-label>
+            <select class="form-control sel1"  formControlName="tipo_transporte_id" > 
+             <option *ngFor="let vh of veh" [value]="vh.id"  >{{vh.nombre}}</option>
+           </select>
+        <br />
+    </mat-dialog-content>
+    <mat-dialog-actions class="buttons">
+        <button type="button" class="btn btn-light" (click)="close()" class="btn btn-dark btn">Cancelar</button>
+        <button [mat-dialog-close]="Insert"  type="button" class="btn btn-success save" (click)="save()">Guardar</button>    
+    </mat-dialog-actions>
+    </div>
+

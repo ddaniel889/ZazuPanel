@@ -1,0 +1,294 @@
+.back  {
+    background-color: #18D2CD !important;
+}
+
+.logo  {
+    float: right !important;
+
+} 
+.float {
+    float: right !important;
+    margin-right: 20px;
+    background-color: #18D2CD;
+}    
+.lfloat {
+    float: left !important;
+
+} 
+.align {
+    margin-left: 20px;
+    float: left;
+    margin-top: 15px !important;
+ 
+ } 
+.bg-p {
+    background-color: #D7DBDA !important;
+
+} 
+.blk {
+    color: black !important;
+
+}
+.store1{
+    background-color: #18D2CD !important;
+    border: 1px solid #18D2CD;
+    height: 40px;
+
+}
+.store2{
+    color: white;
+
+}
+.label{
+    margin-left:10px;
+}
+mat-card-title{
+    font-size: 15px !important;
+    border-bottom: 1px solid black;
+
+}
+.bgr{
+    background-color: #D6D8DE  !important; 
+    height: 680px;
+
+}
+.table at{
+    border-bottom: 0 !important;
+}
+.sub{
+    margin-left: 200px !important;
+}
+.matb{
+   border-bottom: 0;
+}
+.rep{
+    border-top-color: white !important;
+ }
+ .side{
+    border: 0.5px solid black !important;
+ } 
+ .green2{
+    color:#18D2CD;
+    border: 0 !important;
+ }
+
+ p.cat{
+    margin-top: 20px !important;
+} 
+.lf{
+    margin-left: 20px !important;
+ } 
+.matb2{
+    border-bottom: 1px solid white;
+    color: white;
+ }
+
+ .black{
+    color: black;
+    margin-left: 20px !important;
+ }
+mat-card-content{
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+
+}
+.cat{
+font-size: 15px !important;
+color:#18D2CD;
+margin-left: 50px;
+
+}
+.title {
+    float: left !important;
+    font-size: 25px;
+    margin-top: 20px !important;
+}
+.txt{
+    margin-left:5px !important;
+}
+.title2 {
+    float: left !important;
+    font-size: 25px;
+    color: black;
+    margin-top: 10px !important;
+    margin-left: 5px;
+
+}
+.title4 {
+    float: left !important;
+    font-size: 16px;
+    color: #7A7B81;
+    margin-top: 14px !important;
+
+}
+.act {
+   margin-left: 20px !important;
+    float: left;
+    font-size: 16px;
+   /* color: #7A7B81;*/
+    margin-top: 14px !important;
+
+}
+.noBorder{
+    border: white 1px solid !important;
+}
+.at {
+    margin-top: 10px !important;
+}
+.a.edit{
+    width: 100% !important;
+}
+.editI{
+    size: 20px !important;
+}
+.edit{
+    color: #18D2CD ;
+    margin-left: 23px !important;
+    margin-top: 14px !important;
+    font-size: 16px;
+    float: left !important;
+}
+.edit1{
+    color: #18D2CD ;
+    margin-left: 20px !important;
+    margin-top: 7px !important;
+}
+.title3 {
+    margin-left: 20px;
+    margin-top: 20px !important;
+    font-size: 14px;
+    color: white;
+  
+
+}
+.yellow-chart{
+    border-top: 1px solid black;
+    background-color: #18D2CD ;
+    height: 300px;
+}
+.top {
+    margin-top: 20px !important;
+}
+.green{ 
+    border: 1px solid #18D2CD;
+}
+.left {
+    float: left !important;
+    background-color: #43454C;
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    margin-top: 17px;
+
+} 
+
+.left2 {
+    float: right !important;
+    background-color: #EEE338;
+    border: 0;
+    border-radius: 12px;
+    color: black;
+    margin-left: 270px;
+    font-size: 15px;
+
+} 
+.left3 {
+    float: right !important;
+    background-color: #EEE338;
+    border: 0;
+    border-radius: 12px;
+    color: black;
+    margin-right: 50px !important;
+    font-size: 15px;
+    margin-bottom: 5px;
+
+} 
+.rg {
+    
+    width: 100px;
+    height: 100%;
+    background-color: #EEE338;
+    float: right;
+
+}
+th {
+    
+    color: #18D2CD !important;
+
+}
+.four {
+    background-color: black;
+    border: 1px solid black;
+    height: 50px;
+
+}
+.eight {
+    background-color: #18D2CD  ;
+    border: 1px solid #18D2CD ;
+    height: 50px;
+
+}
+.ico{
+    color: white;
+}
+.four2 {
+     background-color: #D6D8DE ;
+    border: 1px solid #D6D8DE ;
+    height: 50px;
+
+}
+.eight2 {
+    background-color: #D6D8DE  ;
+    border: 1px solid #D6D8DE  ;
+    height: 50px;
+
+}
+.buscar{
+    background-color: #4A5151 ;
+}
+.bg-succes{
+    background-color: #EEE338 ;
+    border: 1px solid #EEE338;
+    height: 80px !important;
+}
+.bord{
+    margin-top: 20px !important;
+}
+.marTop{
+    margin-top: 20px ;
+}
+.white{
+    height: 200px !important;
+}
+
+.main{
+    height: 800px ;
+}
+
+bg-gray{
+    background-color: #e9e8db ;
+}
+.bg-bl{
+    background-color: #EEE338 ;
+}
+.bg-pg{
+    background-color: #18D2CD ;
+}
+.ticket{
+    color: white;
+}
+.grays{
+    background-color: #5D605F;
+}
+.b-color{
+    color: #EEE338;
+}
+.tick{
+    color: #0C2478;
+}
+.hb{
+    border: 0.1px white solid;
+}
+.ico{
+    margin-top: 10px !important;
+}

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; overflow-y: hidden !important;}
+body { margin: 0; font-family: "Montserrat" !important; }
+::placeholder { 
+    color: white !important;
+  }
+ 
+  ::-webkit-scrollbar {
+    display: none;
+}
+#drawer{ 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

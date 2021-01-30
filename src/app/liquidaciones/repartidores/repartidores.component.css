@@ -1,0 +1,73 @@
+.back  {
+    background-color: #18D2CD !important;
+}
+
+.logo  {
+    float: right !important;
+
+} 
+.float {
+    float: right !important;
+    background-color: #18D2CD;
+    margin-right: 20px;
+
+}
+.edit{
+    color: #18D2CD !important;
+}
+
+input{
+    color: white !important;
+}
+
+.visi{
+    color: #66CA6D;
+}
+
+.add {
+    
+   color: #EEE338;
+
+}  
+.red {
+    color: #EE4E1A !important;
+
+}
+.title {
+    float: left !important;
+    font-size: 25px;
+    margin-top: 20px !important;
+}
+.title2 {
+    float: left !important;
+    font-size: 25px;
+    color: white;
+    margin-top: 10px !important;
+
+}
+.top {
+    
+    margin-top: 20px !important;
+
+}
+th {
+    
+    color: #18D2CD !important;
+
+}
+.four {
+    background-color: black;
+    border: 1px solid black;
+    height:20 px;
+
+}
+.eight {
+    background-color: #18D2CD  ;
+    border: 1px solid #18D2CD  ;
+    height:20 px;
+
+}
+.buscar{
+    background-color: #4A5151 ;
+    border-radius: 12px !important;
+}

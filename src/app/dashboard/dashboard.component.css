@@ -1,0 +1,181 @@
+h2 {
+    color: #DB5B33;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  toggle-button {
+    margin: 0 auto;
+  } 
+
+.back  {
+    background-color: #18D2CD !important;
+}
+
+.logo  {
+    float: right !important;
+
+} 
+.float {
+    float: right !important;
+
+}  
+.lfloat {
+    float: left !important;
+
+}  
+.hide{
+    color: white !important;
+
+}
+.bg-p {
+    background-color: #D7DBDA !important;
+
+} 
+.trr {
+    border-radius: 12px !important;
+}
+
+
+.title {
+    float: left !important;
+    font-size: 40px;
+    margin-top: 20px !important;
+}
+.title2 {
+    float: left !important;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px !important;
+
+}
+.top {
+    
+    margin-top: 20px !important;
+
+}
+
+.rg {
+    
+    width: 100px;
+    height: 100%;
+    background-color: #EEE338;
+    float: right;
+
+}
+th {
+    
+    color: #18D2CD !important;
+
+}
+.four {
+    background-color: black;
+    border: 1px solid black;
+    height: 50px;
+
+}
+.eight {
+    background-color: #18D2CD  ;
+    border: 1px solid #18D2CD  ;
+    height: 50px;
+
+}
+.buscar{
+    background-color: #4A5151 ;
+}
+.bg-succes{
+    background-color: #EEE338 ;
+}
+.marTop{
+    margin-top: 100px ;
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+.second{
+    font-size: 25px;
+    margin-top:20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.three{
+    font-size: 25px;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.contact{
+    margin-top:15px !important;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color:#0C2478;
+}
+.main{
+    height: 800px ;
+}
+.txt{
+    float: right;
+    margin-right: 20px;
+}
+
+bg-gray{
+    background-color: #e9e8db ;
+}
+.bg-bl{
+    background-color: #EEE338 ;
+}
+.bg-pg{
+    background-color: #18D2CD ;
+    border-radius: 12px !important;
+}
+.ticket{
+    color: white;
+}
+.week{
+    font-size: 35px;
+}
+.grays{
+    background-color: #5D605F;
+}
+.b-color{
+    color: #EEE338;
+}
+.yellow{
+    background-color: #EEE338;
+    color:#0C2478;
+}
+.grayone{
+    background-color: #616266;
+    color: #A6A6A9;
+}
+.gray2{
+    background-color: #929398;
+    color: #A6A6A9;
+}
+.tick{
+    color: #0C2478;
+    font-weight: bold;
+    font-size: 20px;
+}
+.hb{
+    border: 0.1px white solid;
+}
+.big{
+    font-size: 24px;
+}
+.litle{
+    font-size: 45px;
+    margin-top: 10px;
+}

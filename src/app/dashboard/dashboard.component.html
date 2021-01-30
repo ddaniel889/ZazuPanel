@@ -1,0 +1,100 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+        
+          <span class="title text-left" >
+           Dashboard
+          </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left" >
+                Estadísticas
+            </strong>
+        </div>
+        <div class="col-md-4 four">
+            <strong class="title2 text-left" >
+                Contactos recibidos
+         </strong>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-8 bg-light">
+            <div class="row">
+                <div class="col-6 bg-light"> <span class="hide">.col-6 </span>
+                    <div class="card bg-pg">
+                        <div class="card-body text-center">
+                        <p class="card-text tick text-left">Evolución semanal</p>
+                        <table class="table">         
+                        <tr> <td class="ticket text-justify"> Nuevas Tiendas  </td>   <td><span class=" ticket week">37 </span> </td>  <td><span class="badge badge-pill yellow rounded-circle">+5 %</span>   </td>  </tr>
+                        <tr> <td class="ticket text-justify">Nuevos Usuarios   </td>   <td> <span class="ticket week">458 </span> </td>  <td> <span class="badge badge-pill grayone rounded-circle">+9 %</span>  </td>   </tr>
+                        <tr><td class="ticket text-justify">Repartidores nuevos   </td>   <td><span class="ticket week">38 </span> </td>  <td>  <span class="badge badge-pill gray2 rounded-circle">+9 %</span>   </td>    </tr>
+                        </table>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-6 bg-light trr"><span class="hide">.col-6</span>
+                    <div class="card ">
+                        <div class="card-body text-center bg-p">
+                          <p class="card-text tick text-left">Evolución de Transacciones</p>
+                        </div>
+                      </div>
+                </div>
+              </div>
+          <div class="row">
+            <div class="col-12 bg-light"><span class="hide">.col-12</span>
+                <div class="card bg-p">
+                    <div class="card-body text-center">
+                      <p class="card-text text-left tick">Transacciones </p>
+                      <p class="card-text text-left tick">últimos 7 días</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 bg-light"><span class="hide">.col-4</span>
+                <div class="card bg-bl">
+                    <div class="card-body text-center ">
+                      <p class="card-text big">Transacciones hoy</p>
+                      <span class="litle"> 1430</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 bg-light"><span class="hide">.col-4</span>
+                <div class="card bg-pg">
+                    <div class="card-body text-center">
+                        <p class="card-text big">Ticket promedio</p>
+                        <span class="ticket litle">$ 490</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4 bg-light"><span class="hide">.col-4</span>
+                <div class="card grays">
+                    <div class="card-body text-center grays">
+                        <p class="card-text b-color big">Envíos hoy</p>
+                        <span class="ticket litle">870</span>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-4 bg-succes">
+                <div class="marTop">
+                  <p class="contact">Tiendas<span class="txt">{{tienda.total}}</span></p> 
+                </div>
+                <div class="second">
+                  <p class="contact"> Repartidores
+                  <span class="txt">{{repart.total}}</span></p>
+                </div>
+                <div class="three">
+                  <p class="contact">Consumidores
+                  <span class="txt">{{cliente.total}}</span></p> 
+                </div>
+        </div>
+      </div>
+</div>

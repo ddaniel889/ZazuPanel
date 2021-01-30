@@ -1,0 +1,26 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 30px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2">Editar Categoría</h3>
+      </div>
+      <br />
+      <mat-dialog-content [formGroup]="form">       
+        <mat-form-field>
+            <mat-label>Nombre de Categoría</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        <br />
+        <br />
+        <div class="image">
+        <mat-label>Icono de categoría</mat-label> <br />
+        <input #inputFoto hidden="true" type="file" onclick="this.value=null" (change)="onFileChoosen($event.target.files[0])"/>
+        <button mat-flat-button color="primary" type="button" (click)="inputFoto.click()" class="image2"><span class="title2">Imagen</span></button>
+        </div>
+        <br />
+        <br />
+        <br />
+          </mat-dialog-content>
+    <mat-dialog-actions class="buttons">
+        <button type="button" class="btn btn-light" (click)="close()" class="btn btn-dark btn">Cancelar</button>
+        <button [mat-dialog-close]="Insert"  type="button" class="btn btn-success save" (click)="save()">Guardar</button>    
+    </mat-dialog-actions>
+    </div>

@@ -1,0 +1,88 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Campañas
+
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+         
+                     </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left" >
+                Influencers
+         </strong>
+        </div>
+        <div class="col-md-4 four">
+            <form class="form-inline">
+              <span class="glyphicon glyphicon-search"></span>
+                <div class="input-group">
+                  <span class="">@</span>
+                  <input type="text" class="form-control buscar" placeholder="Buscar"  (keyup)="applyFilter($event.target.value)">
+                </div>    
+              </form>
+    
+        </div>
+
+    </div>
+    <div class="top"> </div>
+
+<div></div>
+<div></div>
+<button mat-mini-fab class="float">
+  <mat-icon aria-hidden="false" aria-label="add" class="add" (click)="openDialog()">add</mat-icon>  
+</button>
+
+<br />
+<br />
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" style="width: 100%;">
+  
+      <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let infl"> {{infl.id}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let infl"> {{infl.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Apellido">
+        <th mat-header-cell *matHeaderCellDef> Apellido </th>
+        <td mat-cell *matCellDef="let infl"> {{infl.apellidos}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let infl"> {{infl.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Telefono">
+        <th mat-header-cell *matHeaderCellDef> Telefono </th>
+        <td mat-cell *matCellDef="let infl"> {{infl.telefono}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <mat-cell *matCellDef="let infl">
+        <td>
+          <mat-icon aria-hidden="false" aria-label="Example home icon"  class="edit" (click)="editarInfl(infl)">edit</mat-icon>
+          <mat-icon aria-hidden="false" aria-label="toggle-on" class="edit">toggle_on</mat-icon></td>
+        </mat-cell>
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[1, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+  </div>
+ 
+</div>

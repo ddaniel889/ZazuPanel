@@ -1,0 +1,164 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Repartidores
+
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+         
+                     </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left" >
+              {{persona.nombre}}
+         </strong>
+         <strong class="title2 text-left" >
+          {{persona.apellidos}}
+     </strong>
+         
+        </div>
+        <div class="col-md-4 four">
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 eight2">
+        </div>
+        <div class="col-md-4 four2">
+
+            <strong class="title4" >
+                Estado 
+         </strong>
+
+        <span class="act"> Inactivo  </span>
+       <app-toggle (changed)="onChange($event)" class="align">
+        </app-toggle>
+        
+        <span class="edit"><strong>Activo</strong></span> 
+        <button mat-mini-fab class="float">
+            <mat-icon aria-hidden="false" aria-label="add" class="add" (click)="borrar(detail.id)">delete_forever</mat-icon>
+          </button> 
+        
+        
+        
+
+
+        </div>
+
+    </div>
+    <div class="row ">
+        <div class="col-md-8 bg-light bgr">
+            <mat-card> 
+                <mat-list>
+                  <mat-list-item class=""><span class=""><img src="./assets/img/logo_user.png" alt="logo" />  </span> <span class="cat" ><strong>Tipo de repartidor:</strong></span><span class="label">Repartidor Local</span><span class="btn" ><button type="button"  class="left2" (click)="clickD(detail)"><mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon>Editar</button></span> </mat-list-item>
+                </mat-list> 
+
+        <table class="table at">
+        <tr>          
+        <td><span class="green2 noBorder">Nombre y Apellido</span>  <br />  <strong>{{persona.nombre}} </strong><strong>{{persona.apellidos}} </strong>   </td>       <td> <span class="green2 noBorder">Domicilio </span><br /> {{domicilio}}   </td>  
+        
+        </tr>
+        <tr>          
+            <td><span class="green2 noBorder" > DNI </span><br />  <span>{{dni}} </span>   </td> <td> <span class="green2 noBorder">Localidad</span> <br /> {{localidad}}    </td>  
+            
+            </tr>
+
+            <tr>          
+                <td> <span class="green2 noBorder" >Fecha de nacimiento </span><br />  <span>{{persona.fecha_nacimiento}}</span>   </td>       <td> <span class="green2 noBorder">Teléfono</span> <br />  <span>{{persona.telefono}}</span>    </td>  
+                
+                </tr>   
+                <tr class="noBorder">          
+                    <td><span class="green2 noBorder" > NIT </span><br />  <span>XXXXXXXXXXXXXXX </span>   </td>      
+                     <td><span class="green2 noBorder" rowpan="2"> Tipo Vehículo <br /> <span class="blk">{{transporte.tipo_transporte_nombre}}</span>  </span><br /> 
+                        <span [ngSwitch]="transporte.tipo_transporte_nombre">
+                          <span *ngSwitchCase="'moto'" class="material-icons black">  moped </span>
+                          <span *ngSwitchCase="'bicicleta'" class="material-icons black"> directions_bike</span>
+                          <span *ngSwitchCase="'automovil'" class="material-icons black">  directions_car</span>
+                          <span *ngSwitchCase="'camion'" class="material-icons black">  directions_bus </span>
+                        </span>
+                       </td>  
+                    </tr> 
+                    <tr class="noBorder">          
+                        <td><span class="green2 noBorder">  Género</span> <br />  <span>{{persona.genero}} </span>   </td>          
+                    </tr>      
+              </table>    
+            </mat-card>
+            <mat-card class="bord">
+               <table class="table">
+                <thead>
+                  <tr>
+                    <th class="rep">Configuración Repartidor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cat">Repartidor ZAZU</td>
+                    <td> {{zazu}}</td>
+                  </tr>
+                  <tr>
+                    <td class="cat">Repartidor de una tienda</td>
+                    <td> {{tienda}}  </td>
+                  </tr>
+                  <tr>
+                    <td class="cat">Tipo Repartidor</td>
+                    <td> {{detail.tipo_repartidor }}</td>  
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </mat-card>
+         
+        </div>
+         
+
+        
+        <div class="col-md-4 bgr">
+      
+        
+            <div class="card" style="width:100%; height: 100%; border-radius: 12px;">
+                
+                 
+                  <p class="card-text cat lf"><strong>ACTIVO DESDE</strong></p>
+                  <p class="card-text lf"> <strong>{{detail.fecha_creacion }} </strong></p> 
+                  <hr class="side">
+                  <p class="card-text lf">MODELO DE <button type="button" class="left3" (click)="clickPlan()"><mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon><strong>Editar</strong></button> </p>
+                  <p class="card-text lf"><strong>PLAN: STANDARD </strong> </p>
+                  <hr class="side">
+                  <p class="card-text lf"> <strong>Viajes totales    XXXX </strong></p>
+                  <p class="card-text lf">Delivery XXXX </p>
+                  <p class="card-text lf">Mandado XXXX</p>
+                  <div class="yellow-chart">
+                    <mat-list>
+                        <mat-list-item class="matb2"><mat-icon aria-hidden="false" aria-label="" class="ico">attach_money</mat-icon> <strong>Estado de cuenta del Repartidor EN ZAZU  </strong> </mat-list-item>
+            
+                        <mat-list-item class="matb2"> Liquidaciones generadas xxxx </mat-list-item>
+                    
+                        <mat-list-item class="matb2">Liquidaciones adecuadas xxxx  </mat-list-item>
+                    
+                        <mat-list-item class="matb2"> SITUACION: AL DIA  </mat-list-item>
+                        <hr class="green">
+                        <hr class="green">
+                        <hr class="green">
+                       </mat-list>
+
+
+
+                  </div>  
+                
+              </div>
+            
+
+
+        </div>
+    </div>
+
+</div>
+

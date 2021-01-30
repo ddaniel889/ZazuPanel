@@ -1,0 +1,137 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Tiendas
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+            </span>
+        </div>
+    </div>
+    <div class="row">
+       <!--Sección Header-->
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left" >
+              {{detail.nombre}}
+         </strong>
+        </div>
+        <div class="col-md-4 four">
+            <mat-list>
+                <mat-list-item>
+                <mat-icon aria-hidden="false" aria-label="" routerLink="/tiendas/tienda" class="ico">arrow_back</mat-icon><span class="ico"> Volver</span> 
+                </mat-list-item>
+                </mat-list>
+        </div>
+    </div>
+    <div class="row">
+        <!--Sección Menú-->
+        <div class="col-md-8 eight2">
+            <button type="button" class="user">Detalle Tienda</button>
+            <span  class="detail" text-left routerLink="/user/{{id}}">
+                Usuario
+         </span>
+        </div>
+        <div class="col-md-4 four2">
+            <strong class="title4 text-left" >
+                Estado tienda
+         </strong>
+        <span class="act"> Inactiva  </span>  
+          <app-toggle (changed)="onChange($event)" class="align">
+        </app-toggle>
+        <span class="edit"><strong>Activa</strong></span> 
+        <button mat-mini-fab class="float">
+            <mat-icon aria-hidden="false" aria-label="add" class="add" (click)="borrar(detail.id)" >delete_forever</mat-icon>
+          </button>
+        </div>
+    </div>
+    <div class="row sup">
+        <div class="col-md-8 bgr">
+          <br />
+            <mat-card>
+              <mat-list>
+                <mat-list-item>
+                    <span class="store1"><img src="./assets/img/logo_tienda.png" alt="logo" /> </span> <span class="cat" ><strong>Categroría:</strong></span><span class="subtitle" >Calzado Hombre</span><span class="btn" ><button type="button" class="left2" (click)="clickGen(detail)" ><mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon>Editar</button></span>
+                  </mat-list-item>
+                </mat-list>
+                <br />
+
+       <!--Sección Datos de Tienda-->
+            <table class="table noBorder">
+                <thead>
+                  <tr>
+                   <th scope="col" class="theader"><span class="">Nombre de la Tienda en Zazu </span><br />  <span class="detail txt">{{detail.nombre}} </span></th>
+                    <th scope="col" class="theader"><mat-icon aria-hidden="false" aria-label="toggle-on" class="edit1">person_outline</mat-icon>Titular <br /> <span class="txt">{{nombre}} </span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>  
+                    <td class="sub noBorder">Direccion principal <br /> <span class="txt">{{dom.domicilio}} </span></td>
+                    <td class="sub noBorder">E-mail <br /> <span class="txt">{{correo}} </span></td>
+                  </tr>
+                  <tr>
+                    <td class="sub noBorder">Localidad<br /> <span class="marg txt">{{localidad}} </span></td>
+                    <td class="sub noBorder">DNI <br /> <span class="txt">{{dni}} </span></td>
+                  </tr>
+                  <tr>
+                    <td class="sub noBorder">Teléfono <br /> <span class="txt">{{detail.telefono}}  </span></td>
+                    <td class="sub noBorder">Fecha nacimiento<br /> <span class="marg txt">{{fecha}}  </span>  </td>
+                  </tr>
+                  <tr>
+                    <td class="sub noBorder">NIT<br /> <span class="txt detail">{{detail.nit}} </span> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-card>
+
+     <!--Sección Configuración de Tienda-->
+            <mat-card class="bord">
+            <br />
+                <mat-card-title>
+                    <span class="cat" ><strong>Configuración Tienda</strong></span><button type="button" class="left3" (click)="clickConfig(detail)" ><mat-icon aria-hidden="false" aria-label="Example home icon"  >edit</mat-icon>Editar</button>
+               </mat-card-title>
+            <mat-card-content>
+                <span class="cat" >Método de logística</span><span style="margin-left:250px;">{{detail.tipo_repartidor}}</span>
+               </mat-card-content>
+               <mat-card-content>
+                <span class="cat" >Tipo de liquidación con repartidores</span><span style="margin-left:140px;">{{detail.tipo_liquidacion}}</span>
+               </mat-card-content>
+               <mat-card-content>
+                <span class="cat" >Flujo de compra de consumidor final</span><span style="margin-left:138px;"></span>{{detail.operar_en}}
+               </mat-card-content>
+            </mat-card>
+        
+        </div>
+      <!--Columna lateral Activo desde / Estado de Cuenta-->
+        <div class="col-md-4 bgr">
+          <br /> 
+            <div class="card" style="width:100%; height: 100%; border-radius: 12px;">
+                <p class="card-text cat lf"><strong>ACTIVO DESDE</strong></p>
+                <p class="card-text lf"> <strong>{{detail.fecha_creacion}}  </strong></p>
+                <hr class="side">
+                <p class="card-text lf">CATEGORIA TIENDA: <span>{{detail.categoria_comercio.nombre}} </span><button type="button" class="left3" (click)="clickPlan(detail)" ><mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon><strong>Editar</strong></button> </p>
+                <p class="card-text lf"><strong>PLAN: STANDARD </strong> </p>
+                <hr class="side">
+                <p class="card-text lf"> <strong>Facturación mensual promedio    XXXX </strong></p>
+                <p class="card-text lf">Evolución Facturación  +12%</p>
+                  <div class="yellow-chart">
+                    <mat-list>
+                        <mat-list-item class="matb2"><mat-icon aria-hidden="false" aria-label="" class="ico2">attach_money</mat-icon>  Estado de cuenta EN ZAZU </mat-list-item>
+            
+                        <mat-list-item class="matb2"> Liquidaciones generadas xxxx </mat-list-item>
+                    
+                        <mat-list-item class="matb2">Liquidaciones adecuadas xxxx  </mat-list-item>
+                    
+                        <mat-list-item class="matb2"> SITUACION: AL DIA  </mat-list-item>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                       </mat-list>
+                  </div>  
+              </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,118 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 30px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2"> Alta nuevo Repartidor</h3>
+      </div>
+      <br />
+      <mat-dialog-content  [formGroup]="form" class="content">
+        <table class="full-width-table" cellspacing="0">
+          <tr>
+          <td><mat-form-field class="">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+          </mat-form-field></td>
+          
+          <td>
+            <mat-form-field class="">
+              <mat-label>Apellidos</mat-label>
+              <input matInput  formControlName="apellidos">
+            </mat-form-field>  
+          </td>  
+          </tr>
+          <tr>
+            <td><mat-form-field class="">
+              <mat-label>Documento de Identidad</mat-label>
+              <input matInput formControlName="cuit">
+            </mat-form-field></td>
+            
+            <td>
+              <mat-form-field class="">
+                <mat-label>Teléfono</mat-label>
+                <input matInput formControlName="telefono">
+              </mat-form-field>  
+            </td>  
+            </tr>
+      <tr>
+          <td>
+              <mat-form-field class="full-width">
+                  <mat-label>Domicilio</mat-label>
+                  <textarea matInput formControlName="domicilio"></textarea>
+                </mat-form-field>
+          </td> 
+          <td>
+            <mat-form-field class="">
+              <mat-label>Correo </mat-label>
+              <input matInput type="email" formControlName="correo">
+          </mat-form-field>
+        </td>   
+           
+     </tr>
+     <br />
+     <tr>
+          <td>
+            <mat-label> Comercio</mat-label>
+            <select class="form-control sel1"  formControlName="comercio_id" > 
+              <option *ngFor="let td of tienda" [value]="td.id"  >{{td.nombre}}</option>
+            </select> 
+          </td>  
+          <td>
+            <mat-label> Vehículo (Auto, Moto, Bicicleta, Camioneta,Camión)</mat-label>
+                 <select class="form-control sel1"  formControlName="tipo_transporte_id" > 
+                  <option *ngFor="let vh of veh" [value]="vh.id"  >{{vh.nombre}}</option>
+                </select> 
+          </td>   
+
+      </tr>
+    <br />
+      <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <mat-label>Patente Vehículo. </mat-label>
+              <input matInput type="text" formControlName="dominio">
+          </mat-form-field>
+          </td>  
+          <td>
+            <mat-form-field class="full-width">
+              <mat-label>Nit </mat-label>
+              <input matInput type="text" formControlName="nit">
+          </mat-form-field>
+          </td> 
+          
+
+      </tr>
+      <br />
+      <tr>
+        <td>
+          <mat-label> País</mat-label>
+          <!--select class="form-control sel1"  formControlName="pais_id" >
+                  <option  value="1" >Bolivia</option>
+               </select-->
+          <select class="form-control sel1"  formControlName="pais_id" > 
+                <option *ngFor="let ps of person" [value]="ps.pais.id"  >{{ps.pais.nombre}}</option>
+          </select>     
+        
+        </td>  
+        <td>
+          <mat-label> Género</mat-label>
+            <select class="form-control sel1"  formControlName="genero" >
+                    <option  value="MASCULINO" >Masculino</option>
+                    <option  value="FEMENINO"> Femenino</option>
+                 </select>
+        </td> 
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field class="full-width">
+          <mat-label><strong> Fecha de Nacimiento</strong> </mat-label>
+          <input matInput type="date"  formControlName="fecha_nacimiento"  >
+        </mat-form-field>
+      </td>  
+  </tr>
+     </table> 
+      
+    </mat-dialog-content>
+    <br />
+    <mat-dialog-actions>
+        <button type="button" class="btn btn-light" (click)="close()" class="btn btn-dark btn">Cancelar</button>
+        <button [mat-dialog-close]="dataInsert"  type="button" class="btn btn-success save" (click)="save()">Guardar</button>    
+    </mat-dialog-actions>
+    </div>

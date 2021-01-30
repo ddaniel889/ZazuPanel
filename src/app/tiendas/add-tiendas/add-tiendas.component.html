@@ -1,0 +1,134 @@
+<div class="container-fluid">  
+    <div style="width: 100%; height: 30px;  text-align: left" class="title">
+     <mat-icon aria-hidden="false" aria-label="add" class="add" >add</mat-icon> <h3 class="title2"> Alta nueva Tienda</h3>
+      </div>
+      <br />
+      <mat-dialog-content  class="content">
+        <table class="full-width-table" cellspacing="0">
+          <tr>
+          <td><mat-form-field class="">
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="nombre">
+          </mat-form-field></td>
+          
+          <td>
+            <mat-form-field class="">
+              <mat-label>Localidad</mat-label>
+              <input matInput  [(ngModel)]="localidad">
+            </mat-form-field>  
+          </td>  
+          </tr>
+          <tr>
+            <td><mat-form-field class="">
+              <mat-label>Nit</mat-label>
+              <input matInput [(ngModel)]="nit">
+            </mat-form-field></td>
+            
+            <td>
+              <mat-form-field class="">
+                <mat-label>Teléfono</mat-label>
+                <input matInput [(ngModel)]="telefono">
+              </mat-form-field>  
+            </td>  
+            </tr>
+      <tr>
+          <td>
+              <mat-form-field class="">
+                  <mat-label>Domicilio</mat-label>
+                  <input type="text" matInput [(ngModel)]="domicilio">
+                </mat-form-field>
+          </td> 
+          <td>
+          <mat-label> Flujo de compra de consumidor</mat-label>
+          <select class="form-control sel1"   [(ngModel)]="operar_en">
+                  <option  value="WHATSAPP" >Whatsapp</option>
+                  <option  value="CARRITO_DE_COMPRAS">Carrito de Compras</option>
+               </select>
+        </td>   
+           
+     </tr>
+     <tr>
+          <td>
+            <mat-label> Método de Logística</mat-label>
+            <select class="form-control sel1"   [(ngModel)]="tipo_repartidor">
+                    <option  value="COMERCIO" >COMERCIO</option>
+                    <option  value="EXTERNO">EXTERNO</option>
+                    <option  value="MIXTO">MIXTO</option>
+                 </select>
+         
+
+          </td>  
+          <td>
+            <mat-label> Categoría de comercio</mat-label>
+                 <select class="form-control sel1"  [(ngModel)]="categoria_comercio" > 
+                  <option *ngFor="let vh of cat" [value]="vh.id"  >{{vh.nombre}}</option>
+                </select> 
+          </td>   
+
+      </tr>
+    <br />
+      <tr>
+          <td>
+            <mat-form-field class="full-width">
+              <mat-label>Latitud </mat-label>
+              <input matInput type="text" [(ngModel)]="latitud">
+          </mat-form-field>
+          </td>  
+          <td>
+            <mat-form-field class="full-width">
+              <mat-label>Longitud </mat-label>
+              <input matInput type="text" [(ngModel)]="longitud">
+          </mat-form-field>
+          </td> 
+          
+
+      </tr>
+      <br />
+      <tr>
+        <td>
+          <mat-label> País</mat-label>
+          <select class="form-control sel1"  [(ngModel)]="pais_id" > 
+                <option *ngFor="let ps of pais" [value]="ps.pais.id"  >{{ps.pais.nombre}}</option>
+          </select>     
+        
+        </td>  
+        <td>
+          <mat-label> Persona</mat-label>
+          <select class="form-control sel1"  [(ngModel)]="persona"> 
+            <option *ngFor="let ps of person" [value]="ps.id"  >{{ps.nombre}}</option>
+      </select>     
+        </td> 
+    </tr>
+    <tr>
+      <td>
+        <mat-label> Tipo de Liquidación</mat-label>
+        <select class="form-control sel1"  [(ngModel)]="liquidacion"> 
+          <option  value="DIFERIDA" >DIFERIDA</option>
+          <option  value="ANTICIPADA">ANTICIPADA</option>
+        </select> 
+      </td>  
+      <td>
+        <mat-label> Tarifa</mat-label>
+        <select class="form-control sel1"  [(ngModel)]="tarifa_id" > 
+          <option *ngFor="let td of tarifa" [value]="td.id"  >{{td.nombre}}</option>
+        </select>      
+      </td> 
+  </tr>
+  
+  <tr>
+    <td>
+      <input #inputFoto hidden="true" type="file" onclick="this.value=null" (change)="onFileChoosen($event.target.files[0])" />
+      <button mat-flat-button color="primary" type="button" (click)="inputFoto.click()" class="btnFile">Imagen de logo</button>
+  <br />
+</td> 
+  </tr>
+     </table> 
+      
+    </mat-dialog-content>
+    <br />
+    <br />
+    <mat-dialog-actions>
+        <button type="button" class="btn btn-light" (click)="close()" class="btn btn-dark btn">Cancelar</button>
+        <button [mat-dialog-close]="dataInsert"  type="button" class="btn btn-success save" (click)="save()">Guardar</button>    
+    </mat-dialog-actions>
+    </div>

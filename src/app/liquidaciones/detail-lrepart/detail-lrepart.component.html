@@ -1,0 +1,81 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="title text-left" >
+       Liquidaciones
+
+            </span>
+            <span class="logo" >
+                <img src="./assets/img/yellow.png" alt="yellow" />
+         
+                     </span>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 eight">
+            <strong class="title2 text-left">
+              Detalle Liquidación Repartidor ID  <span>{{repart.id}} </span>
+         </strong>
+        </div>
+        <div class="col-md-4 four">
+          <mat-list>
+            <mat-list-item> <mat-icon aria-hidden="false" aria-label="" routerLink="/liquidaciones/repartidores" class="ico">arrow_back</mat-icon> <span class="ico">Volver</span></mat-list-item>
+              </mat-list>
+        </div>
+
+    </div>
+    <div class="top"> </div>
+
+<div></div>
+<div></div>
+<mat-card class="main">
+    <table class="table top">
+        <thead>
+          <tr>
+            <th>Fecha de Liquidación</th>
+            <th>Nombre Repartidor</th>
+            <th>Importe total liquidado</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{repart.periodo}}</td>
+            <td>{{repart.tarifa_repartidor_id}}</td>
+            <td>{{repart.importe_comisiones}}</td>
+            <td class="badge badge-secondary gyellow" [ngClass]="{red: repart.estado === 'PENDIENTE'}">{{repart.estado}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+</mat-card>    
+<div></div>
+<div></div>
+<br />
+<br />
+<p class="detail">Detalle Comisiones por Envío</p>
+<table class="table top">
+    <thead>
+      <tr>
+        <th>Fecha/hora pedido</th>
+        <th>Consumidor</th>
+        <th>Importe Envío</th>
+        <th>Importe comisión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>XXXXXXXXXXX</td>
+        <td>XXXXXXXXXXX</td>
+        <td>XXXXXXXXXXX</td>
+        <td>XXXXXXXXXXX</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+ 
+</div>
